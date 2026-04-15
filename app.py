@@ -1,7 +1,9 @@
 import streamlit as st
 import numpy as np
 import pickle
+
 # ====== 加载模型 ======
+
 with open("model.pkl", "rb") as f:
     model = pickle.load(f)
 
@@ -10,9 +12,9 @@ st.title("🎓 Exam Score Predictor")
 st.write("input relevant information and get the predicted score")
 
 education_map = {
-    "High School": 1,
-    "College": 2,
-    "Postgraduate":3
+    "High School": 0,
+    "College": 1,
+    "Postgraduate":2
 
 }
 
